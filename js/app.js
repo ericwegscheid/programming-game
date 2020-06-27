@@ -2,15 +2,23 @@
 
   function up() {
     _app.common.log('you when up');
+    let y = parseInt(_app.game.hero.style.top || 0);
+    _app.game.hero.style.top = (y - _app.game.hero.offsetHeight) + 'px';
   }
   function right() {
     _app.common.log('you when right');
-  }
-  function left() {
-    _app.common.log('you when left');
+    let x = parseInt(_app.game.hero.style.left || 0);
+    _app.game.hero.style.left = (x + _app.game.hero.offsetWidth) + 'px';
   }
   function down() {
     _app.common.log('you when down');
+    let y = parseInt(_app.game.hero.style.top || 0);
+    _app.game.hero.style.top = (y + _app.game.hero.offsetHeight) + 'px';
+  }
+  function left() {
+    _app.common.log('you when left');
+    let x = parseInt(_app.game.hero.style.left || 0);
+    _app.game.hero.style.left = (x - _app.game.hero.offsetWidth) + 'px';
   }
   function speak(msg) {
     _app.common.log(msg);

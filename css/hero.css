@@ -1,5 +1,7 @@
 #hero {
-  display: absolute;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: var(--grid-size);
   height: var(--grid-size);
   background-color: var(--color-accent);
