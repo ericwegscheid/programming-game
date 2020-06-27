@@ -77,6 +77,7 @@ function speak(msg) {
       run: e => {
         __.cache('console', _app.game.code.value);
         try {
+          /*
           __.QUEUE
             .setTimeout(500)
             .push(
@@ -85,6 +86,8 @@ function speak(msg) {
               .map(v => eval('() => (function() { ' + v.trim() + ' })()'))
               .reverse()
             ).run();
+            */
+           speak(_app.game.code.value);
         } catch(e) {
           _app.common.error(e);
         }
