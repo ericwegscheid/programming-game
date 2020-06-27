@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang=en>
+<head>
+  <title>Programming Game</title>
+  <meta name="description" content="Game to teach programming.">
+  <meta name="author" content="Eric Wegscheid">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="res/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div id="world">
+      <div id="hero"></div>
+    </div>
+    <div class="controls">
+      <textarea id="code" cols="30" rows="10"></textarea>
+      <div class="spacer"></div>
+      <div class="wrapper">
+        <button fnclick="run">run</button>
+        <button fnclick="reset">reset</button>
+        <button fnclick="clear">clear</button>
+      </div>
+      <div class="spacer"></div>
+      <textarea id="cons" disabled cols="30" rows="10"></textarea>
+    </div>
+  </div>
+</body>
+<script
+  src="http://localhost:3333/common.js"
+  crossorigin="anonymous"
+  type="text/javascript">
+</script>
+<!--
+<script
+  src="https://ericwegscheid.github.io/common.js/common.js"
+  crossorigin="anonymous"
+  type="text/javascript">
+</script>
+-->
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</html>

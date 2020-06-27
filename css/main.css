@@ -1,0 +1,22 @@
+@import 'fonts.css';
+@import 'common.css';
+@import 'base.css';
+@import 'world.css';
+@import 'hero.css';
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--grid-size);
+  margin-right: var(--grid-size);
+  margin-bottom: var(--grid-size);
+}
+
+.controls button {
+  margin-right: var(--grid-size);
+}
+
+.controls button:last-child {
+  margin-right: 0;
+}
+

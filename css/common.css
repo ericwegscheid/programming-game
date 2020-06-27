@@ -1,0 +1,67 @@
+:root {
+  /* https://coolors.co/palettes/trending */
+  --color-light: #f7f7ff;
+  --color-dark: #495867;
+  --color-accent: #fe5f55;
+  --color-primary: #577399;
+  --color-secondary: #bdd5ea;
+  --bg-primary: url(../images/bg-pixels.jpg);
+  --bg-secondary: url(../images/bg-pixels.jpg);
+  --bg-tertiary: url(../images/bg-pixels.jpg);
+  --grid-size: 64px;
+}
+.bg-color-primary {
+  background-color: var(--color-primary);
+}
+.bg-color-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-color-accent {
+  background-color: var(--color-accent);
+}
+.bg-image-primary {
+  background-image: var(--bg-primary);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.bg-image-secondary {
+  background-image: var(--bg-secondary);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.bg-image-tertiary {
+  background-image: var(--bg-tertiary);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bg-pos-tl {
+  background-position: top left;
+}
+.bg-pos-tc {
+  background-position: top center;
+}
+.bg-pos-tr {
+  background-position: top right;
+}
+.bg-pos-cl {
+  background-position: center left;
+}
+.bg-pos-cc {
+  background-position: center;
+}
+.bg-pos-cr {
+  background-position: center right;
+}
+.bg-pos-bl {
+  background-position: bottom left;
+}
+.bg-pos-bc {
+  background-position: bottom center;
+}
+.bg-pos-br {
+  background-position: bottom right;
+}

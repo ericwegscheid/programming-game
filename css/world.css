@@ -1,0 +1,6 @@
+#world {
+  margin: var(--grid-size);
+  background-color: var(--color-dark);
+  width: calc(var(--grid-size) * 10);
+  height: calc(var(--grid-size) * 10);
+}

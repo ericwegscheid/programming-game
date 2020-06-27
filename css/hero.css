@@ -1,0 +1,6 @@
+#hero {
+  display: absolute;
+  width: var(--grid-size);
+  height: var(--grid-size);
+  background-color: var(--color-accent);
+}

@@ -1,0 +1,46 @@
+html, body {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper > * {
+  flex: 1;
+}
+
+.spacer {
+  display: inline-block;
+  width: var(--grid-size);
+  height: var(--grid-size);
+}
+
+
+
+/* 
+footer must be at least as tall as last anchor section minus window height 
+there also the option of each section always being the full height
+*/
+
+@media only screen and (max-width: 960px) {}
