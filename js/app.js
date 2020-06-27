@@ -1,29 +1,29 @@
-(() => {
+function up() {
+  _app.common.log('you went up');
+  let y = parseInt(_app.game.hero.style.top || 0);
+  _app.game.hero.style.top = (y - _app.game.hero.offsetHeight) + 'px';
+}
+function right() {
+  _app.common.log('you went right');
+  let x = parseInt(_app.game.hero.style.left || 0);
+  _app.game.hero.style.left = (x + _app.game.hero.offsetWidth) + 'px';
+}
+function down() {
+  _app.common.log('you went down');
+  let y = parseInt(_app.game.hero.style.top || 0);
+  _app.game.hero.style.top = (y + _app.game.hero.offsetHeight) + 'px';
+}
+function left() {
+  _app.common.log('you went left');
+  let x = parseInt(_app.game.hero.style.left || 0);
+  _app.game.hero.style.left = (x - _app.game.hero.offsetWidth) + 'px';
+}
+function speak(msg) {
+  _app.common.log(msg);
+  window.speechSynthesis.speak(new SpeechSynthesisUtterance(msg));
+}
 
-  function up() {
-    _app.common.log('you when up');
-    let y = parseInt(_app.game.hero.style.top || 0);
-    _app.game.hero.style.top = (y - _app.game.hero.offsetHeight) + 'px';
-  }
-  function right() {
-    _app.common.log('you when right');
-    let x = parseInt(_app.game.hero.style.left || 0);
-    _app.game.hero.style.left = (x + _app.game.hero.offsetWidth) + 'px';
-  }
-  function down() {
-    _app.common.log('you when down');
-    let y = parseInt(_app.game.hero.style.top || 0);
-    _app.game.hero.style.top = (y + _app.game.hero.offsetHeight) + 'px';
-  }
-  function left() {
-    _app.common.log('you when left');
-    let x = parseInt(_app.game.hero.style.left || 0);
-    _app.game.hero.style.left = (x - _app.game.hero.offsetWidth) + 'px';
-  }
-  function speak(msg) {
-    _app.common.log(msg);
-    window.speechSynthesis.speak(new SpeechSynthesisUtterance(msg));
-  }
+(() => {
 
   window._app = {
     init: () => {
@@ -69,14 +69,22 @@
         _app.game.cons.value = '';
       },
       reset: e => {
-        _app.game.code.value = '';
-        __.cache('console', '');
+        // _app.game.code.value = '';
+        // __.cache('console', '');
         _app.handlers.clear();
+        location.reload();
       },
       run: e => {
         __.cache('console', _app.game.code.value);
         try {
-          eval(_app.game.code.value);
+          __.QUEUE
+            .setTimeout(500)
+            .push(
+              _app.game.code.value.split(';')
+              .filter(v => !!v)
+              .map(v => eval('() => (function() { ' + v.trim() + ' })()'))
+              .reverse()
+            ).run();
         } catch(e) {
           _app.common.error(e);
         }
