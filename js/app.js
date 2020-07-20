@@ -15,7 +15,7 @@ function down() {
 }
 function left() {
   _app.common.log('you went left');
-  let x = parseInt(_app.game.hero.style.left || 0);
+ let x = parseInt(_app.game.hero.style.left || 0);
   _app.game.hero.style.left = (x - _app.game.hero.offsetWidth) + 'px';
 }
 function speak(msg) {
@@ -77,17 +77,15 @@ function speak(msg) {
       run: e => {
         __.cache('console', _app.game.code.value);
         try {
-          /*
           __.QUEUE
             .setTimeout(500)
             .push(
               _app.game.code.value.split(';')
-              .filter(v => !!v)
-              .map(v => eval('() => (function() { ' + v.trim() + ' })()'))
-              .reverse()
+                .filter(v => !!v)
+                .map(v => eval('() => (function() { ' + v.trim() + ' })()'))
+                .reverse()
             ).run();
-            */
-           speak(_app.game.code.value);
+//            speak(_app.game.code.value);
         } catch(e) {
           _app.common.error(e);
         }

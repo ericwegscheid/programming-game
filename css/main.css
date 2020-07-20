@@ -10,6 +10,7 @@
   margin-top: var(--grid-size);
   margin-right: var(--grid-size);
   margin-bottom: var(--grid-size);
+  width: calc(var(--grid-size) * 10);
 }
 
 .controls button {

@@ -6,36 +6,14 @@ html, body {
   height: 100%;
 }
 
-ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+body > .wrapper {
+  display: block;
+  width: calc(var(--grid-size) *  24);
 }
 
-a {
-  text-decoration: none;
+body > .wrapper > * {
+  float: left;
 }
-
-button {
-  min-width: 48px;
-  min-height: 48px;
-}
-
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-.wrapper > * {
-  flex: 1;
-}
-
-.spacer {
-  display: inline-block;
-  width: var(--grid-size);
-  height: var(--grid-size);
-}
-
 
 
 /* 
